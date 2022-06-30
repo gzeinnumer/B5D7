@@ -22,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         vm = new ViewModelProvider(this).get(MainVM.class);
 
-//        vm.setStr("Zein");
+        binding.btn.setOnClickListener(view -> {
+            vm.setStr("Zein");
+        });
 
         new Handler().postDelayed(new Runnable() {
             @Override
